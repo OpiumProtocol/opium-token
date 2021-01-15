@@ -272,9 +272,14 @@
     ethers "^4.0.0-beta.1"
     source-map-support "^0.5.19"
 
-"@openzeppelin/contracts@https://github.com/OpenZeppelin/openzeppelin-contracts.git#318c4b4":
+"@openzeppelin/contracts-upgradeable@^3.3.0":
   version "3.3.0"
-  resolved "https://github.com/OpenZeppelin/openzeppelin-contracts.git#318c4b44eaba2d745ed4a6381c43e03edc53634d"
+  resolved "https://registry.yarnpkg.com/@openzeppelin/contracts-upgradeable/-/contracts-upgradeable-3.3.0.tgz#a536c6ff107d21319490e6cb699e555a3edcf6ea"
+  integrity sha512-kJeNuKauR4xH52Yo3GdXXAOW4CWyWdm7VXcJFe63G8TRb45ISSnkt/gXwUa8zzEYqokQrwNZYoH/iGYfUlp6wA==
+
+"@openzeppelin/contracts@git+https://github.com/OpenZeppelin/openzeppelin-contracts.git#318c4b4":
+  version "3.3.0"
+  resolved "git+https://github.com/OpenZeppelin/openzeppelin-contracts.git#318c4b44eaba2d745ed4a6381c43e03edc53634d"
 
 "@sentry/core@5.29.2":
   version "5.29.2"
