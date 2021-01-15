@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: UNLICENSED
 
 pragma solidity 0.7.6;
-pragma experimental ABIEncoderV2;
 
 import "@openzeppelin/contracts/contracts/drafts/ERC20Permit.sol";
 
