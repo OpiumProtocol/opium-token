@@ -16,4 +16,5 @@ Run `yarn compile`
 
 1) Copy `hardhat.config.example.ts` -> `hardhat.config.ts`
 2) Change `<INFURA_ID>` in `hardhat.config.example.ts`
-3) Run `yarn test`
+3) Run `yarn ganache`
+4) Run `yarn test`

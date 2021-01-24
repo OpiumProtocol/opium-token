@@ -8,3 +8,6 @@ typechain/
 
 # Config
 hardhat.config.ts
+
+# Typechain Web3
+web3/

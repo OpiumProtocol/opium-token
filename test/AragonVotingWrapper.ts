@@ -17,14 +17,22 @@ const m100 = toE18('100000000')
 const k5 = toE18('5000')
 const k2 = toE18('2000')
 
-contract('AragonVotingWrapper', ([ owner, holder ]) => {
-  before(async () => {
-    opium = await OpiumToken.new({ from: owner })
-    voting = await VotingToken.new({ from: owner })
-    wrapper = await AragonVotingWrapper.new(opium.address, voting.address, { from: owner })
+const CONFIGURATOR = '0xDbC2F7f3bCcccf54F1bdA43C57E8aB526e379DF1'
 
-    await voting.transfer(wrapper.address, m100, { from: owner })
-    await opium.transfer(holder, k5, { from: owner })
+contract('AragonVotingWrapper', ([ deployer, holder ]) => {
+  before(async () => {
+    opium = await OpiumToken.new({ from: deployer })
+    voting = await VotingToken.new({ from: deployer })
+    wrapper = await AragonVotingWrapper.new(opium.address, voting.address, { from: deployer })
+
+    await web3.eth.sendTransaction({
+      from: deployer,
+      to: CONFIGURATOR,
+      value: toE18('1')
+    })
+
+    await voting.transfer(wrapper.address, m100, { from: deployer })
+    await opium.transfer(holder, k5, { from: CONFIGURATOR })
   })
 
   context('Initial setup', () => {

@@ -8,9 +8,11 @@ const toE18 = (value: string) => web3.utils.toWei(value)
 
 const m100 = toE18('100000000')
 
-contract('OpiumToken', ([ owner ]) => {
+const CONFIGURATOR = '0xDbC2F7f3bCcccf54F1bdA43C57E8aB526e379DF1'
+
+contract('OpiumToken', ([ deployer ]) => {
   before(async () => {
-    opium = await OpiumToken.new({ from: owner })
+    opium = await OpiumToken.new({ from: deployer })
   })
 
   context('Initial setup', () => {
@@ -20,14 +22,14 @@ contract('OpiumToken', ([ owner ]) => {
       const decimals = await opium.decimals()
 
       const totalSupply = await opium.totalSupply()
-      const ownerBalance = await opium.balanceOf(owner)
+      const configuratorBalance = await opium.balanceOf(CONFIGURATOR)
 
       assert.equal(name, 'Opium Governance Token', 'Wrong token name')
       assert.equal(symbol, 'OPIUM', 'Wrong token symbol')
       assert.equal(decimals.toString(), '18', 'Wrong token decimals')
 
       assert.equal(totalSupply.toString(), m100, 'Wrong token total supply')
-      assert.equal(ownerBalance.toString(), m100, 'Wrong owner balance')
+      assert.equal(configuratorBalance.toString(), m100, 'Wrong owner balance')
     })
   })
 })
