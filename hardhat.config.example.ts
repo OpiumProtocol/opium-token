@@ -10,6 +10,9 @@ const config: HardhatUserConfig = {
     rinkeby: {
       url: "https://rinkeby.infura.io/v3/<INFURA_ID>",
       accounts: [ '<PRIVATE_KEY>' ]
+    },
+    ganache: {
+      url: "http://localhost:8545",
     }
   },
 
