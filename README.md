@@ -2,7 +2,7 @@
 
 $OPIUM token is a pure OpenZeppelin ERC20 + Permit
 
-AragonVotingWrapper is contract which exchanges $OPIUM to $vOPIUM and back with 1:1 ratio
+AragonVotingWrapper is contract which exchanges $OPIUM to $wOPIUM and back with 1:1 ratio
 
 # Installation
 
