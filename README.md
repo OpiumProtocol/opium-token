@@ -1,9 +1,12 @@
-# Opium Token
+# Opium Governance Token
 
 $OPIUM token is a pure OpenZeppelin ERC20 + Permit
 
 AragonVotingWrapper is contract which exchanges $OPIUM to $wOPIUM and back with 1:1 ratio
 
+## Audit
+
+Opium Governance Token and Aragon Voting Wrapper were audited by [MixBytes](https://mixbytes.io/) and report can be found [here](./audit/OpiumGovernanceTokenAuditMixBytes.pdf)
 # Installation
 
 Run `yarn`
